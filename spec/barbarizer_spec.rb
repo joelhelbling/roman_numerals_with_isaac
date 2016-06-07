@@ -44,5 +44,45 @@ describe Barbarizer do
       Given(:numeral) { 'IC' }
       Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
     end
+    context 'numeral: IXI' do
+      Given(:numeral) { 'IXI' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: IVI' do
+      Given(:numeral) { 'IVI' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: XXXX' do
+      Given(:numeral) { 'XXXX' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: CXXXX' do
+      Given(:numeral) { 'CXXXX' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: XXXXC' do
+      Given(:numeral) { 'XXXXC' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: XXXXXC' do
+      Given(:numeral) { 'XXXXXC' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: XXXXI' do
+      Given(:numeral) { 'XXXXI' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: MMMMM' do
+      Given(:numeral) { 'MMMMM' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: XCXC' do
+      Given(:numeral) { 'XCXC' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
+    context 'numeral: CLXIVMMXL' do
+      Given(:numeral) { 'CLXIVMMXL' }
+      Then { expect{Barbarizer.barbarize numeral}.to raise_error(ArgumentError) }
+    end
   end #context
 end #describe

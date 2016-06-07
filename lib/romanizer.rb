@@ -10,16 +10,23 @@ class Romanizer
 
       roman = ''
       while number > 0
-        rchar, arabic = NumberTable.values.find do |r,a|
-          number >= a
-        end
+        rchar, arabic = find_char_for number
+        
         roman << rchar
-        number -= arabic
+        arabic.each do |n|
+          number -= n
+        end
       end
       roman
     end
 
     private
+
+    def find_char_for number
+      NumberTable.values.find do |r,a|
+        number >= a.inject(0){|sum,n| sum += n}
+      end
+    end
 
     def ensure_valid number
       if !number.is_a?(Fixnum) || number > 4999 || number < 1
